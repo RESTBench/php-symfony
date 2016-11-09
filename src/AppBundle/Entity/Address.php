@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Mero\Bundle\BaseBundle\Entity\Field\IdTrait;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -11,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Address
 {
+    use IdTrait;
 
     /**
      * @var Contact Address contact
@@ -72,7 +74,7 @@ class Address
      *
      * @return Contact Address contact
      */
-    public function getContact(): Contact
+    public function getContact()
     {
         return $this->contact;
     }
@@ -82,7 +84,7 @@ class Address
      *
      * @return string Address street
      */
-    public function getStreet(): string
+    public function getStreet()
     {
         return $this->street;
     }
@@ -94,9 +96,10 @@ class Address
      *
      * @return Address
      */
-    public function setStreet(string $street): Address
+    public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -105,7 +108,7 @@ class Address
      *
      * @return int Address number
      */
-    public function getNumber(): int
+    public function getNumber()
     {
         return $this->number;
     }
@@ -117,9 +120,10 @@ class Address
      *
      * @return Address
      */
-    public function setNumber(int $number): Address
+    public function setNumber($number)
     {
         $this->number = $number;
+
         return $this;
     }
 
@@ -128,7 +132,7 @@ class Address
      *
      * @return string Address line two
      */
-    public function getLine2(): string
+    public function getLine2()
     {
         return $this->line2;
     }
@@ -140,9 +144,10 @@ class Address
      *
      * @return Address
      */
-    public function setLine2(string $line2): Address
+    public function setLine2($line2)
     {
         $this->line2 = $line2;
+
         return $this;
     }
 
@@ -151,7 +156,7 @@ class Address
      *
      * @return string Address postal code
      */
-    public function getPostalCode(): string
+    public function getPostalCode()
     {
         return $this->postalCode;
     }
@@ -163,9 +168,10 @@ class Address
      *
      * @return Address
      */
-    public function setPostalCode(string $postalCode): Address
+    public function setPostalCode($postalCode)
     {
         $this->postalCode = $postalCode;
+
         return $this;
     }
 
@@ -174,7 +180,7 @@ class Address
      *
      * @return string Address country
      */
-    public function getCountry(): string
+    public function getCountry()
     {
         return $this->country;
     }
@@ -186,10 +192,10 @@ class Address
      *
      * @return Address
      */
-    public function setCountry(string $country): Address
+    public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
-
 }

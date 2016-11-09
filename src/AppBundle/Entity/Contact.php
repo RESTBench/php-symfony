@@ -14,7 +14,6 @@ use Mero\Bundle\BaseBundle\Entity\Field\IdTrait;
  */
 class Contact
 {
-
     use IdTrait;
 
     /**
@@ -58,7 +57,7 @@ class Contact
      *
      * @return string Contact first name
      */
-    public function getFirstName(): string
+    public function getFirstName()
     {
         return $this->firstName;
     }
@@ -70,9 +69,10 @@ class Contact
      *
      * @return Contact
      */
-    public function setFirstName(string $firstName): Contact
+    public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -81,7 +81,7 @@ class Contact
      *
      * @return string Contact last name
      */
-    public function getLastName(): string
+    public function getLastName()
     {
         return $this->lastName;
     }
@@ -93,9 +93,10 @@ class Contact
      *
      * @return Contact
      */
-    public function setLastName(string $lastName = null): Contact
+    public function setLastName($lastName = null)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -104,7 +105,7 @@ class Contact
      *
      * @return int Contact age
      */
-    public function getAge(): int
+    public function getAge()
     {
         return $this->age;
     }
@@ -116,9 +117,10 @@ class Contact
      *
      * @return Contact
      */
-    public function setAge(int $age): Contact
+    public function setAge($age)
     {
         $this->age = $age;
+
         return $this;
     }
 
@@ -127,7 +129,7 @@ class Contact
      *
      * @return Collection List of contact address
      */
-    public function getAdresses(): Collection
+    public function getAdresses()
     {
         return $this->adresses;
     }
@@ -139,10 +141,10 @@ class Contact
      *
      * @return Contact
      */
-    public function setAdresses(Collection $adresses): Contact
+    public function setAdresses($adresses)
     {
         $this->adresses = $adresses;
+
         return $this;
     }
-
 }
