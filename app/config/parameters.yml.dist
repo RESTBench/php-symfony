@@ -3,7 +3,7 @@
 # http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
     database_driver:   pdo_pgsql
-    database_host:     postgres
+    database_host:     database
     database_port:     5432
     database_name:     restapi
     database_user:     postgres

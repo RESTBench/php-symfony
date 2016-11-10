@@ -6,6 +6,18 @@ Requirements
 
 * PHP 5.5.9 or above
 
+Deployment guide
+----------------
+
+http://symfony.com/doc/current/deployment.html
+
+Creating database structure
+---------------------------
+
+```
+$ php bin/console doctrine:schema:create
+```
+
 JWT Authentication
 ------------------
 

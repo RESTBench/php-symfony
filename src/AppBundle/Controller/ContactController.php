@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\ConstraintViolation;
 
 /**
- * @Route()
+ * @Route("/contact")
  */
 class ContactController extends Controller
 {
